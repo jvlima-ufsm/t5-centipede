@@ -90,14 +90,14 @@ inline bool intercr(Circulo c, Retangulo r) {
         if (c.centro.x < r.pos.x)
             lim.x = r.pos.x - c.centro.x;
         else if (c.centro.x > r.pos.x + r.tam.larg)
-            lim.x = c.centro.x - r.pos.x + r.tam.larg;
+            lim.x = c.centro.x - (r.pos.x + r.tam.larg);
         else
             lim.x = 0;
 
         if (c.centro.y < r.pos.y)
             lim.y = r.pos.y - c.centro.y;
         else if (c.centro.y > r.pos.y + r.tam.alt)
-            lim.y = c.centro.y - r.pos.y + r.tam.alt;
+            lim.y = c.centro.y - (r.pos.y + r.tam.alt);
         else
             lim.y = 0;
 
